@@ -57,9 +57,7 @@ Location -> Cantina Madrid -> Layout
 Semantic search guide: https://ai.google.dev/gemini-api/docs/semantic_retrieval
 Service key instructions: https://developers.google.com/identity/protocols/oauth2/service-account#creatinganaccount
 
-^ i think that makes the file we place in credentials ie: geminiapideveloper-1623bba633a0.json
-
-Sure! Here are the steps we took from building the Docker image to deploying it on Google Cloud Run, followed by uploading the `ui` folder to Google Cloud Storage:
+^ Creates credential file: geminiapideveloper-xxxxxxxxxx.json
 
 ### Docker Deployment and UI Hosting Steps
 
