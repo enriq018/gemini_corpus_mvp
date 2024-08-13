@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Object Builder</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">JSON Object Builder</h1>
+
+        <div class="main-dialog-purpose">
+            <h2>Main Dialog Purpose</h2>
+            <div class="form-group">
+                <input type="text" id="dialogPurposeInput" class="form-control" placeholder="Main Dialog Purpose: e.g., Guide the player to find the hidden treasure in the enchanted forest while revealing clues about its location">
+                <button id="addDialogPurposeButton" class="btn btn-primary mt-3">Add Dialog Purpose</button>
+            </div>
+        </div>
+
+        <div class="builder-container mt-5">
+            <div class="relevant-lore-builder builder">
+                <h2>Relevant Lore Builder</h2>
+                <div class="relevant-lore-builder__category">
+                    <label for="categorySelect" class="relevant-lore-builder__label">Select Category</label>
+                    <select id="categorySelect" class="form-control">
+                        <option value="">Select Category</option>
+                    </select>
+                </div>
+
+                <div class="relevant-lore-builder__title mt-3">
+                    <label for="titleSelect" class="relevant-lore-builder__label">Select Title</label>
+                    <select id="titleSelect" class="form-control" disabled>
+                        <option value="">Select Title</option>
+                    </select>
+                </div>
+
+                <div class="relevant-lore-builder__values mt-3">
+                    <label class="relevant-lore-builder__label">Select Values</label>
+                    <div id="valuesList" class="relevant-lore-builder__values-list">
+                        <!-- Values checkboxes will be dynamically added here -->
+                    </div>
+                </div>
+
+                <button id="addButton" class="btn btn-primary mt-3" disabled>Add to JSON</button>
+            </div>
+
+            <div class="npc-modifiers-builder builder">
+                <h2>NPC Modifiers Builder</h2>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="modifierName" class="npc-modifiers-builder__label">Modifier Name</label>
+                        <input type="text" id="modifierName" class="form-control" placeholder="Modifier Name">
+                        <select id="modifierDropdown" class="form-control mt-2">
+                            <option value="">Select Modifier</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="modifierValue" class="npc-modifiers-builder__label">Value</label>
+                        <input type="text" id="modifierValue" class="form-control" placeholder="Value">
+                    </div>
+                </div>
+                <button id="addModifierButton" class="btn btn-primary mt-3">Add Modifier</button>
+            </div>
+        </div>
+
+        <div class="output-container mt-5">
+            <div class="output">
+                <h3>Current JSON Object</h3>
+                <textarea id="jsonEditor" class="form-control" rows="10"></textarea>
+                <button id="generateDialogButton" class="btn btn-primary mt-3">Generate Dialog</button>
+                <button id="useMockButton" class="btn btn-secondary mt-3">Use Mock</button>
+            </div>
+
+            <div class="response">
+                <h3>Generated Dialog</h3>
+                <pre id="responseOutput" class="response__output">Response results will be displayed here...</pre>
+            </div>
+        </div>
+        <br>
+    </div>
+    <script src="master_tags.js"></script> <!-- Including the master_tags script -->
+    <script src="scripts.js"></script> <!-- Including the script file -->
+    <script src="api.js"></script> <!-- Including the new API script -->
+</body>
+</html>
